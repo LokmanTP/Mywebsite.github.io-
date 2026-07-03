@@ -1,0 +1,64 @@
+<div style="position:relative; background:#040d1f; border-radius:12px; padding:32px; overflow:hidden; min-height:560px; font-family:monospace;">
+
+<svg width="0" height="0" style="position:absolute;">
+<defs>
+<symbol id="cat-icon" viewBox="0 0 24 24">
+<path d="M4 9 L6 3 L9 8 Z" fill="currentColor"/>
+<path d="M20 9 L18 3 L15 8 Z" fill="currentColor"/>
+<rect x="4" y="8" width="16" height="12" rx="6" fill="currentColor"/>
+<circle cx="9" cy="14" r="1.1" fill="#040d1f"/>
+<circle cx="15" cy="14" r="1.1" fill="#040d1f"/>
+<path d="M11 16.5 L13 16.5 L12 17.5 Z" fill="#040d1f"/>
+</symbol>
+</defs>
+</svg>
+
+<div id="cat-bg" style="position:absolute; inset:0; display:grid; grid-template-columns:repeat(14,1fr); gap:18px; padding:16px;"></div>
+
+<div style="position:relative; z-index:1; max-width:620px; margin:0 auto; border-radius:10px; overflow:hidden; border:0.5px solid #85B7EB;">
+
+<div style="background:#0c2a4d; padding:10px 16px; display:flex; align-items:center; gap:8px;">
+<div style="width:12px; height:12px; border-radius:50%; background:#E24B4A;"></div>
+<div style="width:12px; height:12px; border-radius:50%; background:#EF9F27;"></div>
+<div style="width:12px; height:12px; border-radius:50%; background:#5DCAA5;"></div>
+<span style="margin-left:10px; font-size:13px; color:#B5D4F4;">lokman@terminal: ~/about_me</span>
+</div>
+
+<div style="background:#04070f; padding:22px 20px; font-size:13px; line-height:1.6; color:#85B7EB;">
+<p style="margin:0 0 14px;"><span style="color:#B5D4F4;">lokman@terminal:~$</span> cat about_me.txt</p>
+<p style="margin:0 0 16px; font-size:15px; font-weight:700; color:#5DADE2;">&gt; LOKMAN PROFILE &lt;</p>
+
+<p style="margin:0 0 4px; color:#5DADE2;">[NAME]</p>
+<p style="margin:0 0 18px; color:#E6F1FB;">Lokman</p>
+
+<p style="margin:0 0 4px; color:#5DADE2;">[BIO]</p>
+<p style="margin:0 0 10px; color:#B5D4F4;">&gt; A programmer at heart, always building something new whether it's clean code, a 3D scene, an edited video, or content for the channel.</p>
+<p style="margin:0 0 18px; color:#B5D4F4;">&gt; Splits time between the terminal, the 3D viewport, and the editing timeline.</p>
+
+<p style="margin:0 0 10px; color:#5DADE2;">[SKILLS]</p>
+<div style="display:grid; grid-template-columns:repeat(4,1fr); gap:8px;">
+<div style="text-align:center; padding:8px 4px; border:0.5px solid #185FA5; border-radius:6px; background:#08213f; color:#B5D4F4; font-size:12px;">Programmer</div>
+<div style="text-align:center; padding:8px 4px; border:0.5px solid #185FA5; border-radius:6px; background:#08213f; color:#B5D4F4; font-size:12px;">3D modeler</div>
+<div style="text-align:center; padding:8px 4px; border:0.5px solid #185FA5; border-radius:6px; background:#08213f; color:#B5D4F4; font-size:12px;">Video editor</div>
+<div style="text-align:center; padding:8px 4px; border:0.5px solid #185FA5; border-radius:6px; background:#08213f; color:#B5D4F4; font-size:12px;">Youtuber</div>
+</div>
+
+<p style="margin:18px 0 0; color:#5DADE2;">lokman@terminal:~$ <span style="opacity:0.6;">_</span></p>
+</div>
+</div>
+
+<script>
+(function(){
+  var colors = ["#E24B4A","#EF9F27","#FAC775","#639922","#97C459","#1D9E75","#378ADD","#7F77DD","#D4537E","#D85A30"];
+  var bg = document.getElementById("cat-bg");
+  for (var i = 0; i < 42; i++) {
+    var c = colors[i % colors.length];
+    var wrap = document.createElement("div");
+    wrap.style.color = c;
+    wrap.style.opacity = "0.55";
+    wrap.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24"><use href="#cat-icon"></use></svg>';
+    bg.appendChild(wrap);
+  }
+})();
+</script>
+</div>
